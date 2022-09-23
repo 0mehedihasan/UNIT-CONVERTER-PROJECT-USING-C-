@@ -10,14 +10,14 @@ int main()
 
     /*Variable for unit converter----end*/
 	/*display which option will be slect by user----start*/
-	printf("Press 1 to use Lenghth Converter\n");
-	printf("Press 2 to use Time Converter\n");
-	printf("Press 3 to use temperature Converter\n");
-	printf("Press 4 to use Mass Converter\n");
-	printf("Press 5 to use Current Converter\n");
-	printf("Press 6 to use Substance Converter\n");
-	printf("Press 7 to use luminosity Converter\n");
-	printf("Press 8 to use Currency Converter\n");
+	printf("Press 1 to use Lenghth\t\tConverter\n");
+	printf("Press 2 to use Time\t\tConverter\n");
+	printf("Press 3 to use temperature\tConverter\n");
+	printf("Press 4 to use Mass\t\tConverter\n");
+	printf("Press 5 to use Current\t\tConverter\n");
+	printf("Press 6 to use Area\t\tConverter\n");
+	printf("Press 7 to use Volume\t\tConverter\n");
+	printf("Press 8 to use Currency\t\tConverter\n");
 
 	/*display which option will be slect by user-----end*/
 	printf("Enter your choice:\n");
@@ -31,9 +31,13 @@ int main()
         {
 
         printf("Enter 1: Convert Meter to Centimeter\n");
-        printf("Enter 2: Convert centimeter to meter\n");
-        printf("Enter 3: Convert Kilometer to meter\n");
+        printf("Enter 2: Convert centimeter to Meter\n");
+        printf("Enter 3: Convert Kilometer to Meter\n");
         printf("Enter 4: Convert Meter to Kilometer\n");
+        printf("Enter 5: Convert Meter to Millimeter\n");
+        printf("Enter 6: Convert Millimeter to Meter\n");
+        printf("Enter 7: Convert Inch to Meter\n");
+        printf("Enter 8: Convert Meter to inch\n");
 	    int choice_length;
 	    scanf("%d",&choice_length);
 	    switch(choice_length)
@@ -74,9 +78,44 @@ kilomeemeter=1000/meter;
 printf("Kilometer= %.2f",meter);
 break;
 }
-
-		break;
-	}}
+case 5://meter to milliometer
+{
+printf("Enter the value of meter=");
+float meter,millimeter;
+scanf("%f",&meter);
+millimeter=1000*meter;
+printf("Millimeter= %f",meter);
+break;
+}
+case 6://Millimeter to meter
+{
+printf("Enter the value of Millimeter=");
+float meter,millimeter;
+scanf("%f",&millimeter);
+meter=millimeter/1000;
+printf("Meter= %f",meter);
+break;
+}
+case 7://Inch to meter
+{
+printf("Enter the value of Inch=");
+float meter,i;
+scanf("%f",&i);
+meter=i*0.0254;
+printf("Meter= %f",meter);
+break;
+}
+case 8:// meter to inch
+{
+printf("Enter the value of Meter=");
+float meter,i;
+scanf("%f",&meter);
+i=meter*39.3701;
+printf("Inch= %f",i);
+break;
+}	}
+	break;
+	}
 case 2://time works here
 
 	    {
@@ -111,7 +150,7 @@ case 2://Convert Minutes to Second
 {
 printf("Enter the value of Minute=");
 float s,m;
-scanf("%f",&s);
+scanf("%f",&m);
 s=60*m;
 printf("Seconds= %.2f",s);
 break;
@@ -235,59 +274,123 @@ break;
 
 case 3://use temperature Converter
     {//case-3-start
-        printf("add temperature submenu here\n");
-	    int choice_temperature;
-	    scanf("%d",&choice_temperature);
-	    switch(choice_temperature)
-	    {
+        printf("Enter 1: Convert Fahrenheit to celsius\n");
+        printf("Enter 2: Convert celsius to fahrenheit\n");
+        printf("Enter 3: Convert celsius to Kelvin\n");
+        printf("Enter 4: Convert Kelvin to fahrenheit\n");
+        printf("Enter 5: Convert fahrenheit to Kelvin\n");
+        printf("Enter 6: Convert kelvin to celcius\n");
+   int choice_temperature;
+   scanf("%d",&choice_temperature);
+   switch(choice_temperature)
+   {
 case 1:
     {
+     printf("Enter the value of Fahrenheit=");
+float f,c;
+scanf("%f",&f);
+c=((f-32)*5)/9;
+printf("Celcius=%.2f",c);
+break;
 
-        break;
     }
 case 2:
     {
+    printf("Enter the value of Celcius=");
+float f,c;
+scanf("%f",&c);
+f=( (c*9)/5)+32;
+printf("Fahrenheit=%.2f",f);
 
         break;
     }
-case 3:
+    case 3:
     {
+    printf("Enter the value of Celcius=");
+float kelvin,c;
+scanf("%f",&c);
+kelvin = 273.15 +c;
+printf("Kelvin=%.2f",kelvin);
 
         break;
     }
-case 4:
+    case 4:
     {
+    printf("Enter the value of Kelvin=");
+float kel, F;
+scanf("%f", &kel);
+F = ((9.0 / 5) * (kel - 273.15)) + 32;
+printf("Fahrenheit=%.2f",F);
 
         break;
     }
-	    }
+case 5:
+    {
+    printf("Enter the value of Fahrenheit=");
+float kel, F;
+scanf("%f", &kel);
+kel = ((5.0 / 9) * (F - 32)) + 273.15;
+printf("Kelvin=%.2f",kel);
+
+        break;
+    }
+    case 6:
+    {
+    printf("Enter the value of Kelvin=");
+float kelvin,c;
+scanf("%f",&kelvin);
+c=kelvin-273.15;
+printf("Celcius=%.2f",c);
+
+        break;
+	    }}
 break;
     }//case-3-end
 
 case 4://use Mass Converter
     {//case-4-start
-printf("add Mass submenu here\n");
-	    int choice_mass;
-	    scanf("%d",&choice_mass);
-	    switch(choice_mass)
-	    {
+        printf("Enter 1: Convert gram to kilogram\n");
+        printf("Enter 2: Convert kilogram to gram\n");
+        printf("Enter 3: Convert gram to miligram\n");
+        printf("Enter 4: Convert miligram to gram\n");
+   int choice_mass;
+   scanf("%d",&choice_mass);
+   switch(choice_mass)
+   {
 case 1:
     {
-
+     printf("Enter the value of gram=");
+float g,k;
+scanf("%f",&g);
+k=g/1000;
+printf("kilogram=%.2f",k);
         break;
     }
 case 2:
     {
-
+     printf("Enter the value of kilogram=");
+float g,k;
+scanf("%f",&k);
+g=k/1000;
+printf("kilogram=%.2f",g);
         break;
     }
 case 3:
     {
-
+printf("Enter the value of gram=");
+float g,m;
+scanf("%f",&g);
+m=g*1000;
+printf("miligram=%.2f",m);
         break;
     }
 case 4:
     {
+printf("Enter the value of miligram=");
+float g,m;
+scanf("%f",&m);
+g=m/1000;
+printf("gram=%.2f",g);
 
         break;
     }
@@ -298,29 +401,49 @@ break;
 
 case 5://use Current Converter
     {//case-5-start
-printf("add temperature submenu here\n");
-	    int choice_Current ;
-	    scanf("%d",&choice_Current );
-	    switch(choice_Current)
-	    {
+  printf("Enter 1: Convert Ampere to Miliampere\n");
+        printf("Enter 2: Convert miliampere to ampere\n");
+        printf("Enter 3: Convert kiloampere to ampere\n");
+        printf("Enter 4: Convert ampere to Kiloampere\n");
+   int choice_Current ;
+   scanf("%d",&choice_Current );
+   switch(choice_Current)
+   {
 case 1:
     {
+printf("Enter the value of ampere=");
+float a,m;
+scanf("%f",&a);
+m=1000*a;
+printf("miliampere= %.2f",m);
 
         break;
     }
 case 2:
     {
-
+printf("Enter the value of miliampere=");
+float k,m;
+scanf("%f",&m);
+k=m/1000;
+printf("ampere= %.2f",k);
         break;
     }
 case 3:
     {
-
+printf("Enter the value of kiloampere=");
+float k,m;
+scanf("%f",&k);
+m=k/1000000;
+printf("miliampere= %.2f",m);
         break;
     }
 case 4:
     {
-
+printf("Enter the value of miliampere=");
+float k,m;
+scanf("%f",&m);
+k=1000000*m;
+printf("miliampere= %.2f",k);
         break;
     }
 	    }
@@ -328,62 +451,138 @@ break;
     }//case-5-end
 
 
-case 6://use Substance Converter
+case 6://use area Converter
     {//case-6-start
-printf("add substance submenu here\n");
-	    int choice_substance ;
-	    scanf("%d",&choice_substance);
-	    switch(choice_substance)
+    int choice,r,l,w,b,h;
+      float area;
+      printf("Enter 1 for area of circle\n");
+      printf("Enter 2 for area of rectangle\n");
+      printf("Enter 3 for area of triangle\n");
+      printf("Enter 4 for area of Square\n");
+	    int choice_area;
+	    scanf("%d",&choice_area);
+	    switch(choice_area)
 	    {
-case 1:
-    {
+            case 1:
+                {
 
-        break;
-    }
-case 2:
-    {
-
-        break;
-    }
-case 3:
-    {
-
-        break;
-    }
-case 4:
-    {
-
-        break;
-    }
+                 printf("Input radious of the circle : ");
+                 scanf("%d",&r);
+                 area=3.14*r*r;
+                 printf("The area of the circle is : %f\n",area);
+                 break;
+                }
+            case 2:
+                {
+                  printf("Input length and width of the rectangle : ");
+                  scanf("%d%d",&l,&w);
+                  area=l*w;
+                  printf("The area of the rectangle is : %f\n",area);
+                  break;
+                }
+            case 3:{
+                  printf("Input the base and hight of the triangle :");
+                  scanf("%d%d",&b,&h);
+                  area=.5*b*h;
+                  printf("The area of the triangle is : %f\n",area);
+                  break;
+                    }
+                case 4:
+                {
+                    float side,area;
+                    printf("Enter the Length of Side : ");
+                    scanf("%f",&side);
+                    area = side * side ;
+                    printf("The Area of Square is: %f",area);
+                }
 	    }
 break;
     }//case-6-end
 
-case 7://use luminosity Converter
+case 7://use Volume Converter
     {//case-7-start
-printf("add luminosity submenu here\n");
-	    int choice_luminosity ;
-	    scanf("%d",&choice_luminosity);
-	    switch(choice_luminosity)
+        printf("Enter 1 to Convert Liter to Milliliter\n");
+        printf("Enter 2 to Convert Milli-liter to Liter\n");
+        printf("Enter 3 to Convert Liter to Centi-liter\n");
+        printf("Enter 4 to Convert Centi-iter to Liter\n");
+        printf("Enter 5 to Convert Liter to Deci-liter\n");
+        printf("Enter 6 to Convert Deci-liter to Liter\n");
+        printf("Enter 7 to Convert Liter to Hecto-liter\n");
+        printf("Enter 8 to Convert Hecto-liter to Liter\n");
+	    int choice_volume ;
+	    scanf("%d",&choice_volume);
+	    switch(choice_volume)
 	    {
 case 1:
     {
-
+    printf("Enter the value of liter:");
+    float l,ml;
+    scanf("%f",&l);
+    ml=1000*l;
+    printf("Milli-liter=%f",ml);
         break;
     }
 case 2:
     {
-
+    printf("Enter the value of Milli-liter:");
+    float l,ml;
+    scanf("%f",&l);
+    l=ml/1000;
+    printf("liter=%f",l);
         break;
     }
 case 3:
     {
-
+    printf("Enter the value of liter:");
+    float l,cl;
+    scanf("%f",&l);
+    cl=100*l;
+    printf("Cent-liter=%f",cl);
         break;
     }
 case 4:
     {
-
+    printf("Enter the value of Centi-liter:");
+    float l,cl;
+    scanf("%f",&cl);
+    l=cl/100;
+    printf("Liter=%.2f",l);
+        break;
+    }
+case 5:
+    {
+    printf("Enter the value of liter:");
+    float l,cl;
+    scanf("%f",&l);
+    cl=10*l;
+    printf("Deci-liter=%f",cl);
+        break;
+    }
+case 6:
+    {
+    printf("Enter the value of Deci-liter:");
+    float l,cl;
+    scanf("%f",&cl);
+    l=cl/10;
+    printf("Liter=%.2f",l);
+        break;
+    }
+case 7:
+    {
+    printf("Enter the value of liter:");
+    float l,cl;
+    scanf("%f",&l);
+    cl=100/l;
+    printf("Hecto-liter=%f",cl);
+        break;
+    }
+case 8:
+    {
+    printf("Enter the value of Hecto-liter:");
+    float l,cl;
+    scanf("%f",&cl);
+    l=cl*100;
+    printf("Liter=%.2f",l);
         break;
     }
 	    }
