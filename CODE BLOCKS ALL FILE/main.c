@@ -1,5 +1,4 @@
-// C program to illustrate
-// Menu-Driven program
+// C program to makes a unit converter
 // using Switch-case
 
 #include <stdio.h>
@@ -24,6 +23,7 @@ int main()
 
 	int choice;
 	scanf("%d",&choice);
+	if(choice>0&&choice<9){
 	switch (choice)
 
 	{
@@ -591,35 +591,221 @@ break;
 
 case 8://use Currency Converter
     {//case-8-start
-printf("add Currency submenu here\n");
-	    int choice_Currency ;
-	    scanf("%d",&choice_Currency);
-	    switch(choice_Currency)
-	    {
+
+        printf("Enter 1: Convert BDT to Dollar\n");
+        printf("Enter 2: Convert Dollar to BDT\n");
+        printf("Enter 3: Convert BDT to Euro\n");
+        printf("Enter 4: Convert Euro to BDT\n");
+        printf("Enter 5: Convert BDT to Rupee\n");
+        printf("Enter 6: Convert Rupee to BDT\n");
+        printf("Enter 7: Convert BDT to Pound\n");
+        printf("Enter 8: Convert Pound to BDT\n");
+        printf("Enter 9: Convert BDT to Yen\n");
+         printf("Enter 10: Convert Yen to BDT\n");
+          printf("Enter 11: Convert BDT to Ruble\n");
+           printf("Enter 12: Convert Ruble to BDT\n");
+            printf("Enter 13: Convert BDT to franc\n");
+             printf("Enter 14: Convert franc to BDT\n");
+        printf("Enter 15: Convert BDT to krona\n");
+         printf("Enter 16: Convert krona to BDT\n");
+          printf("Enter 17: Convert BDT to AUD\n");
+          printf("Enter 18: Convert AUD to BDT\n");
+        printf("Enter 19: Convert BDT to CAD\n");
+        printf("Enter 20: Convert CAD to BDT\n");
+   int choice_Currency ;
+   scanf("%d",&choice_Currency);
+   switch(choice_Currency)
+   {
 case 1:
     {
-
+    printf("Enter the amount of BDT=");
+float b,d;
+scanf("%f",&b);
+d=0.0097*b;
+printf("Dollar= %.2f",d);
         break;
     }
 case 2:
     {
-
+    printf("Enter the amount of Dollar=");
+float b,d;
+scanf("%f",&d);
+b=b/0.097;
+printf("BDT= %.2f",b);
         break;
     }
 case 3:
     {
-
+    printf("Enter the amount of BDT=");
+float b,e;
+scanf("%f",&b);
+e=0.0100*b;
+printf("Dollar= %.2f",e);
         break;
     }
 case 4:
     {
-
+printf("Enter the amount of Euro=");
+float b,e;
+scanf("%f",&e);
+b=e/0.0100;
+printf("BDT= %.2f",b);
         break;
     }
-	    }
+    case 5:
+    {
+printf("Enter the amount of BDT=");
+float b,p;
+scanf("%f",&b);
+p=0.0089*b;
+printf("BDT= %.2f",b);
+        break;
+}
+case 6:
+    {
+printf("Enter the amount of Pound=");
+float b,p;
+scanf("%f",&p);
+b=p/0.0089;
+printf("BDT= %.2f",b);
+        break;
+    }
+        case 7:
+    {
+printf("Enter the amount of BDT=");
+float b,r;
+scanf("%f",&b);
+r=b*0.79;
+printf("BDT= %.2f",b);
+        break;
+    }
+    case 8:
+    {
+printf("Enter the amount of rupee=");
+float b,r;
+scanf("%f",&r);
+b=r/0.79;
+printf("BDT= %.2f",b);
+        break;
+    }
+        case 9:
+    {
+printf("Enter the amount of BDT=");
+float b,y;
+scanf("%f",&b);
+y=b*1.39;
+printf("BDT= %.2f",y);
+        break;
+     }
+
+        case 10:
+    {
+printf("Enter the amount of yen=");
+float b,y;
+scanf("%f",&y);
+b=y/1.39;
+printf("BDT= %.2f",b);
+        break;
+    }
+    case 11:
+    {
+printf("Enter the amount of BDT=");
+float b,ru;
+scanf("%f",&b);
+ru=0.56*b;
+printf("ruble= %.2f",ru);
+        break;
+    }
+    case 12:
+    {
+printf("Enter the amount of ruble=");
+float b,ru;
+scanf("%f",&ru);
+b=ru/0.56;
+printf("BDT= %.2f",b);
+        break;
+    }
+    case 13:
+    {
+printf("Enter the amount of BDT=");
+float b,f;
+scanf("%f",&f);
+f=0.0100*b;
+printf("franc= %.2f",f);
+        break;
+    }
+    case 14:
+    {
+printf("Enter the amount of franc=");
+float b,f;
+scanf("%f",&f);
+b=b/0.0100;
+printf("BDT= %.2f",b);
+        break;
+    }
+    case 15:
+    {
+printf("Enter the amount of BDT=");
+float b,k;
+scanf("%f",&b);
+k=0.11*b;
+printf("Krona= %.2f",k);
+        break;
+    }
+    case 16:
+    {
+printf("Enter the amount of krona=");
+float b,k;
+scanf("%f",&k);
+k=b/0.11;
+printf("BDT= %.2f",k);
+        break;
+    }
+    case 17:
+    {
+printf("Enter the amount of BDT=");
+float b,a;
+scanf("%f",&b);
+a=0.015*b;
+printf("AUD= %.2f",a);
+        break;
+    }
+    case 18:
+    {
+printf("Enter the amount of AUD=");
+float b,a;
+scanf("%f",&a);
+b=a/0.015;
+printf("BDT= %.2f",b);
+        break;
+    }
+    case 19:
+    {
+printf("Enter the amount of BDT=");
+float b,c;
+scanf("%f",&c);
+c=0.013*b;
+printf("CAD= %.2f",c);
+        break;
+    }
+    case 20:
+    {
+printf("Enter the amount of CAD=");
+float b,c;
+scanf("%f",&c);
+b=c/0.013;
+printf("BDT= %.2f",b);
+        break;
+    }
+   }
 break;
     }//case-8-end
 
 	}
+	}
+else
+{
+    printf("Your option is invalid\nPlease Press a valid option");
+}
 	return 0;
 }
