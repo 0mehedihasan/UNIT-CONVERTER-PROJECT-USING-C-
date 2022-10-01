@@ -2,21 +2,36 @@
 // using Switch-case
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
 int main()
 {
+    system("color 4f");
 	/*Variable for unit converter----start*/
 
 
     /*Variable for unit converter----end*/
 	/*display which option will be slect by user----start*/
-	printf("Press 1 to use Lenghth\t\tConverter\n");
-	printf("Press 2 to use Time\t\tConverter\n");
-	printf("Press 3 to use temperature\tConverter\n");
-	printf("Press 4 to use Mass\t\tConverter\n");
-	printf("Press 5 to use Current\t\tConverter\n");
-	printf("Press 6 to use Area\t\tConverter\n");
-	printf("Press 7 to use Volume\t\tConverter\n");
-	printf("Press 8 to use Currency\t\tConverter\n");
+	system("cls");
+        static CONSOLE_FONT_INFOEX  fontex;
+     fontex.cbSize = sizeof(CONSOLE_FONT_INFOEX);
+     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+     GetCurrentConsoleFontEx(hOut, 0, &fontex);
+     fontex.FontWeight = 1000;
+     fontex.dwFontSize.X = 45;
+     fontex.dwFontSize.Y = 45;
+     SetCurrentConsoleFontEx(hOut, NULL, &fontex);
+	printf("\t\t\t\tU N I T    C O N V E R T E R\n");
+    printf("\t\t\t\t____________________________\n\n");
+    printf("\t\t*****************Welcome to Unit converter*****************\n\n");
+	printf("Press 1 to use Lenghth Converter\n");
+	printf("Press 2 to use Time Converter\n");
+	printf("Press 3 to use temperature Converter\n");
+	printf("Press 4 to use Mass Converter\n");
+	printf("Press 5 to use Current Converter\n");
+	printf("Press 6 to use Area Converter\n");
+	printf("Press 7 to use Volume Converter\n");
+	printf("Press 8 to use Currency Converter\n");
 
 	/*display which option will be slect by user-----end*/
 	printf("Enter your choice:\n");
@@ -29,7 +44,7 @@ int main()
 	{
 	case 1: //length works here
         {
-
+        printf("\nLength Converter:\n\n");
         printf("Enter 1: Convert Meter to Centimeter\n");
         printf("Enter 2: Convert centimeter to Meter\n");
         printf("Enter 3: Convert Kilometer to Meter\n");
@@ -38,6 +53,7 @@ int main()
         printf("Enter 6: Convert Millimeter to Meter\n");
         printf("Enter 7: Convert Inch to Meter\n");
         printf("Enter 8: Convert Meter to inch\n");
+        printf("Enter your choice:\n");
 	    int choice_length;
 	    scanf("%d",&choice_length);
 	    switch(choice_length)
@@ -119,13 +135,14 @@ break;
 case 2://time works here
 
 	    {
+        printf("\nTime Converter:\n\n");
         printf("Enter 1: Convert Seconds to Minutes\n");
         printf("Enter 2: Convert Minutes to Second\n");
         printf("Enter 3: Convert Seconds to Hour\n");
         printf("Enter 4: Convert Hour to Seconds\n");
         printf("Enter 5: Convert Minute to Hour\n");
         printf("Enter 6: Convert Hour to Minute\n");
-        printf("Enter 7: Convert Hour  to DAY\n");
+        printf("Enter 7: Convert Hour  to Day\n");
         printf("Enter 8: Convert Day to Hour\n");
         printf("Enter 9: Convert Day to Weeek\n");
         printf("Enter 10: Convert Weeek to Day\n");
@@ -133,6 +150,7 @@ case 2://time works here
         printf("Enter 12: Convert Month to Day\n");
         printf("Enter 13: Convert Day to Year\n");
         printf("Enter 14: Convert Year to Day\n");
+        printf("Enter your choice:\n");
 	    int choice_time;
 	    scanf("%d",&choice_time);
 	    switch(choice_time)
@@ -274,12 +292,14 @@ break;
 
 case 3://use temperature Converter
     {//case-3-start
+        printf("\nTemparature Converter:\n\n");
         printf("Enter 1: Convert Fahrenheit to celsius\n");
         printf("Enter 2: Convert celsius to fahrenheit\n");
         printf("Enter 3: Convert celsius to Kelvin\n");
         printf("Enter 4: Convert Kelvin to fahrenheit\n");
         printf("Enter 5: Convert fahrenheit to Kelvin\n");
         printf("Enter 6: Convert kelvin to celcius\n");
+        printf("Enter your choice:\n");
    int choice_temperature;
    scanf("%d",&choice_temperature);
    switch(choice_temperature)
@@ -349,10 +369,12 @@ break;
 
 case 4://use Mass Converter
     {//case-4-start
-        printf("Enter 1: Convert gram to kilogram\n");
-        printf("Enter 2: Convert kilogram to gram\n");
-        printf("Enter 3: Convert gram to miligram\n");
-        printf("Enter 4: Convert miligram to gram\n");
+        printf("\nMass Converter:\n\n");
+        printf("Press 1: Convert gram to kilogram\n");
+        printf("Press 2: Convert kilogram to gram\n");
+        printf("Press 3: Convert gram to miligram\n");
+        printf("Press 4: Convert miligram to gram\n");
+        printf("Enter your choice:\n");
    int choice_mass;
    scanf("%d",&choice_mass);
    switch(choice_mass)
@@ -401,10 +423,12 @@ break;
 
 case 5://use Current Converter
     {//case-5-start
-  printf("Enter 1: Convert Ampere to Miliampere\n");
-        printf("Enter 2: Convert miliampere to ampere\n");
-        printf("Enter 3: Convert kiloampere to ampere\n");
-        printf("Enter 4: Convert ampere to Kiloampere\n");
+        printf("\nCurrent Converter:\n\n");
+        printf("Press 1: Convert Ampere to Miliampere\n");
+        printf("Press 2: Convert miliampere to ampere\n");
+        printf("Press 3: Convert kiloampere to ampere\n");
+        printf("Press 4: Convert ampere to Kiloampere\n");
+        printf("Enter your choice:\n");
    int choice_Current ;
    scanf("%d",&choice_Current );
    switch(choice_Current)
@@ -455,10 +479,12 @@ case 6://use area Converter
     {//case-6-start
     int choice,r,l,w,b,h;
       float area;
-      printf("Enter 1 for area of circle\n");
-      printf("Enter 2 for area of rectangle\n");
-      printf("Enter 3 for area of triangle\n");
-      printf("Enter 4 for area of Square\n");
+      printf("\nArea Converter:\n\n");
+      printf("Press 1: for area of circle\n");
+      printf("Press 2: for area of rectangle\n");
+      printf("Press 3: for area of triangle\n");
+      printf("Press 4: for area of Square\n");
+      printf("Enter your choice:\n");
 	    int choice_area;
 	    scanf("%d",&choice_area);
 	    switch(choice_area)
@@ -501,14 +527,16 @@ break;
 
 case 7://use Volume Converter
     {//case-7-start
-        printf("Enter 1 to Convert Liter to Milliliter\n");
-        printf("Enter 2 to Convert Milli-liter to Liter\n");
-        printf("Enter 3 to Convert Liter to Centi-liter\n");
-        printf("Enter 4 to Convert Centi-iter to Liter\n");
-        printf("Enter 5 to Convert Liter to Deci-liter\n");
-        printf("Enter 6 to Convert Deci-liter to Liter\n");
-        printf("Enter 7 to Convert Liter to Hecto-liter\n");
-        printf("Enter 8 to Convert Hecto-liter to Liter\n");
+        printf("\nVolume Converter:\n\n");
+        printf("Press 1 : to Convert Liter to Milliliter\n");
+        printf("Press 2 : to Convert Milli-liter to Liter\n");
+        printf("Press 3 : to Convert Liter to Centi-liter\n");
+        printf("Press 4 : to Convert Centi-iter to Liter\n");
+        printf("Press 5 : to Convert Liter to Deci-liter\n");
+        printf("Press 6 : to Convert Deci-liter to Liter\n");
+        printf("Press 7 : to Convert Liter to Hecto-liter\n");
+        printf("Press 8 : to Convert Hecto-liter to Liter\n");
+        printf("Enter your choice:\n");
 	    int choice_volume ;
 	    scanf("%d",&choice_volume);
 	    switch(choice_volume)
@@ -591,27 +619,28 @@ break;
 
 case 8://use Currency Converter
     {//case-8-start
-
-        printf("Enter 1: Convert BDT to Dollar\n");
-        printf("Enter 2: Convert Dollar to BDT\n");
-        printf("Enter 3: Convert BDT to Euro\n");
-        printf("Enter 4: Convert Euro to BDT\n");
-        printf("Enter 5: Convert BDT to Rupee\n");
-        printf("Enter 6: Convert Rupee to BDT\n");
-        printf("Enter 7: Convert BDT to Pound\n");
-        printf("Enter 8: Convert Pound to BDT\n");
-        printf("Enter 9: Convert BDT to Yen\n");
-         printf("Enter 10: Convert Yen to BDT\n");
-          printf("Enter 11: Convert BDT to Ruble\n");
-           printf("Enter 12: Convert Ruble to BDT\n");
-            printf("Enter 13: Convert BDT to franc\n");
-             printf("Enter 14: Convert franc to BDT\n");
-        printf("Enter 15: Convert BDT to krona\n");
-         printf("Enter 16: Convert krona to BDT\n");
-          printf("Enter 17: Convert BDT to AUD\n");
-          printf("Enter 18: Convert AUD to BDT\n");
-        printf("Enter 19: Convert BDT to CAD\n");
-        printf("Enter 20: Convert CAD to BDT\n");
+        printf("\nCurrency Converter:\n\n");
+        printf("Press 1: Convert BDT to Dollar\n");
+        printf("Press 2: Convert Dollar to BDT\n");
+        printf("Press 3: Convert BDT to Euro\n");
+        printf("Press 4: Convert Euro to BDT\n");
+        printf("Press 5: Convert BDT to Rupee\n");
+        printf("Press 6: Convert Rupee to BDT\n");
+        printf("Press 7: Convert BDT to Pound\n");
+        printf("Press 8: Convert Pound to BDT\n");
+        printf("Press 9: Convert BDT to Yen\n");
+        printf("Press 10: Convert Yen to BDT\n");
+        printf("Press 11: Convert BDT to Ruble\n");
+        printf("Press 12: Convert Ruble to BDT\n");
+        printf("Press 13: Convert BDT to franc\n");
+        printf("Press 14: Convert franc to BDT\n");
+        printf("Press 15: Convert BDT to krona\n");
+        printf("Press 16: Convert krona to BDT\n");
+        printf("Press 17: Convert BDT to AUD\n");
+        printf("Press 18: Convert AUD to BDT\n");
+        printf("Press 19: Convert BDT to CAD\n");
+        printf("Press 20: Convert CAD to BDT\n");
+        printf("Enter your choice:\n");
    int choice_Currency ;
    scanf("%d",&choice_Currency);
    switch(choice_Currency)
