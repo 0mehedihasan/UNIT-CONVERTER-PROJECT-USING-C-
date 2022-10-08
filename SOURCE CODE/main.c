@@ -1,4 +1,4 @@
-// C program to makes a unit converter
+// C program to make a unit converter
 // using Switch-case
 
 #include <stdio.h>
@@ -374,6 +374,23 @@ case 4://use Mass Converter
         printf("Press 2: Convert kilogram to gram\n");
         printf("Press 3: Convert gram to miligram\n");
         printf("Press 4: Convert miligram to gram\n");
+	printf("Press 5: Convert kilogram to miligram\n");
+        printf("Press 6: Convert miligram to kilogram\n");
+        printf("Press 7: Convert pound to ounce\n");
+        printf("Press 8: Convert ounce to pound\n");
+        printf("Press 9: Convert pound to gram\n");
+        printf("Press 10: Convert pound to miligram\n");
+        printf("Press 11: Convert pound to kilogram\n");
+        printf("Press 12: Convert gram to pound\n");
+        printf("Press 13: Convert miligram to pound \n");
+        printf("Press 14: Convert kilogram  to pound\n");
+        printf("Press 15: Convert ounce to gram\n");
+        printf("Press 16: Convert ounce to miligram\n");
+        printf("Press 17: Convert ounce to kilogram\n");
+        printf("Press 18: Convert gram to once\n");
+        printf("Press 19: Convert miligram to ounce \n");
+        printf("Press 20: Convert  kilogram to ounce\n");
+    
         printf("Enter your choice:\n");
    int choice_mass;
    scanf("%d",&choice_mass);
@@ -416,7 +433,165 @@ printf("gram=%.2f",g);
 
         break;
     }
-	    }
+	case 5:
+    {
+     printf("Enter the value of kilogram=");
+float m,k;
+scanf("%f",&k);
+m=k*1000000;
+printf("miligram=%.2f",m);
+        break;
+    }
+
+case 6:
+    {
+     printf("Enter the value of miligram=");
+float m,k;
+scanf("%f",&m);
+k=m/1000000;
+printf("kilogram=%.2f",k);
+        break;
+    }
+
+case 7:
+    {
+     printf("Enter the value of pound=");
+float p,o;
+scanf("%f",&p);
+o=p*16;
+printf("ounce=%.2f",o);
+        break;
+    }
+
+
+case 8:
+    {
+     printf("Enter the value of ounce=");
+float o,p;
+scanf("%f",&o);
+p=o/16;
+printf("pound=%.2f",p);
+        break;
+    }
+
+case 9:
+    {
+     printf("Enter the value of pound=");
+float g,p;
+scanf("%f",&p);
+g=p*453.592;
+printf("gram=%.2f",g);
+        break;
+    }
+case 10:
+    {
+     printf("Enter the value of pound=");
+float m,p;
+scanf("%f",&p);
+m=p*453592;
+printf("miligram=%.2f",m);
+        break;
+    }
+case 11:
+    {
+     printf("Enter the value of pound=");
+float k,p;
+scanf("%f",&p);
+k=p*0.453592;
+printf("kilogram=%.2f",k);
+        break;
+    }
+
+ case 12:
+    {
+     printf("Enter the value of gram=");
+float g,p;
+scanf("%f",&g);
+p=g/453.592;
+printf("pound=%.2f",p);
+        break;
+    }
+
+case 13:
+    {
+     printf("Enter the value of miligram=");
+float m,p;
+scanf("%f",&m);
+p=m/453592;
+printf("pound=%.2f",p);
+        break;
+    }
+
+  case 14:
+    {
+     printf("Enter the value of kilogram =");
+float k,p;
+scanf("%f",&k);
+p=k/0.453592;
+printf("pound=%.2f",p);
+        break;
+    }
+ case 15:
+    {
+     printf("Enter the value of ounce=");
+float o,g;
+scanf("%f",&o);
+g=o*28.35;
+printf("gram=%.2f",g);
+        break;
+    }
+
+case 16:
+    {
+     printf("Enter the value of ounce=");
+float m,o;
+scanf("%f",&o);
+m=o*28349.523;
+printf("miligram=%.2f",m);
+        break;
+    }
+
+ case 17:
+    {
+     printf("Enter the value of ounce=");
+float o,k;
+scanf("%f",&o);
+k=o*0.0283;
+printf("kilogram=%.2f",k);
+        break;
+    }
+
+case 18:
+    {
+     printf("Enter the value of gram=");
+float g,o;
+scanf("%f",&g);
+o=g/28.35;
+printf("ounce=%.2f",o);
+        break;
+    }
+case 19:
+    {
+     printf("Enter the value of miligram  =");
+float o,m;
+scanf("%f",&m);
+o=m/28349.523;
+printf("ounce=%.2f",o);
+        break;
+    }
+
+
+case 20:
+    {
+     printf("Enter the value of kilogram=");
+float k,o;
+scanf("%f",&k);
+o=k/0.0283;
+printf("ounce=%.2f",o);
+        break;
+    }
+
+   }
 break;
     }//case-4-end
 
