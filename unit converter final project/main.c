@@ -15,9 +15,9 @@ int main()
      fontex.cbSize = sizeof(CONSOLE_FONT_INFOEX);
      HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
      GetCurrentConsoleFontEx(hOut, 0, &fontex);
-     fontex.FontWeight = 500;
-     fontex.dwFontSize.X = 45;
-     fontex.dwFontSize.Y = 45;
+     fontex.FontWeight = 400;
+     fontex.dwFontSize.X = 35;
+     fontex.dwFontSize.Y = 35;
      char cont = 'y';
      SetCurrentConsoleFontEx(hOut, NULL, &fontex);
     while(cont == 'y'){
@@ -45,6 +45,7 @@ int main()
 	{
 	case 1: //length works here
         {
+            system("cls");
         printf("\nLength Converter:\n\n");
         printf("Enter 1: Convert Meter to Centimeter\n");
         printf("Enter 2: Convert centimeter to Meter\n");
@@ -136,6 +137,7 @@ break;
 case 2://time works here
 
 	    {
+	        system("cls");
         printf("\nTime Converter:\n\n");
         printf("Enter 1: Convert Seconds to Minutes\n");
         printf("Enter 2: Convert Minutes to Second\n");
@@ -293,6 +295,7 @@ break;
 
 case 3://use temperature Converter
     {//case-3-start
+        system("cls");
         printf("\nTemparature Converter:\n\n");
         printf("Enter 1: Convert Fahrenheit to Celsius\n");
         printf("Enter 2: Convert Celsius to Fahrenheit\n");
@@ -370,6 +373,7 @@ break;
 
 case 4://use Mass Converter
        {//case-4-start
+           system("cls");
         printf("\nMass Converter:\n\n");
         printf("Press  1: Convert kilogram to milligram\n");
         printf("Press  2: Convert milligram kilogram\n");
@@ -554,6 +558,7 @@ break;
 
 case 5://use Current Converter
     {//case-5-start
+        system("cls");
         printf("\nCurrent Converter:\n\n");
         printf("Press 1: Convert Ampere to milliampere\n");
         printf("Press 2: Convert milliampere to ampere\n");
@@ -608,6 +613,7 @@ break;
 
 case 6://use area Converter
     {//case-6-start
+        system("cls");
       int choice,r,l,w,b,h;
       float area;
       printf("\nArea Converter:\n\n");
@@ -658,6 +664,7 @@ break;
 
 case 7://use Volume Converter
     {//case-7-start
+        system("cls");
         printf("\nVolume Converter:\n\n");
         printf("Press 1 : to Convert Liter to Milliliter\n");
         printf("Press 2 : to Convert Milliliter to Liter\n");
@@ -750,6 +757,7 @@ break;
 
 case 8://use Currency Converter
     {//case-8-start
+        system("cls");
         printf("\nCurrency Converter:\n\n");
         printf("Press  1: Convert BDT to Dollar\n");
         printf("Press  2: Convert Dollar to BDT\n");
