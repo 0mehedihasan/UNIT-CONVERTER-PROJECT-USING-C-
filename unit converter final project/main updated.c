@@ -1,6 +1,5 @@
 // C program to makes a unit converter
 // using Switch-case
-// Jannat ID: 21225103350
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
@@ -38,7 +37,8 @@ int main()
 	printf("Enter your choice:\n");
 	int choice;
 	scanf("%d",&choice);
-	if(choice>0&&choice<9){
+	if(choice>0&&choice<9)
+        {
 	switch (choice)
 
 	{
@@ -137,11 +137,12 @@ scanf("%f",&meter);
 i=meter*39.3701;
 printf("Inch= %f",i);
 break;
-}	}
+} //case 8 ends here
+} //switch choice length ends here
 	break;
-	}
+	} //case 1 ends here
 
-// Meem ID: 21225103351
+
 case 2://time works here
 
 	    {
@@ -300,7 +301,7 @@ break;
 		break;
 	}
 
-// Johora ID: 21225103339
+
 
 case 3://use temperature Converter
     {//case-3-start
@@ -379,7 +380,7 @@ printf("Celsius=%.2f",c);
 break;
     }//case-3-end
 
-// Faiza ID: 21225103338
+
 
 case 4://use Mass Converter
        {//case-4-start
@@ -566,7 +567,6 @@ printf("ounce=%.3f",o);
 break;
     }//case-4-end
 
-// Faiza ID: 21225103338
 
 case 5://use Current Converter
     {//case-5-start
@@ -622,7 +622,6 @@ printf("kilo-ampere= %.6f",k);
 break;
     }//case-5-end
 
-// Anim ID: 21225103341
 
 case 6://use area Converter
     {//case-6-start
@@ -675,7 +674,6 @@ break;
     }//case-6-end
 
 
-// Johora ID: 21225103339
 
 case 7://use Volume Converter
     {//case-7-start
@@ -770,7 +768,6 @@ case 8:
 break;
     }//case-7-end
 
-// Anim ID: 21225103341
 
 case 8://use Currency Converter
     {//case-8-start
@@ -985,8 +982,8 @@ printf("BDT= %.2f",b);
 break;
     }//case-8-end
 
-	}
-	}
+	} //switch choice ends here
+	} // if condition ends here
 else
 {
     printf("Your option is invalid\nPlease Press a valid option");
@@ -994,6 +991,6 @@ else
 printf("\n\nDo you want to continue?[y/n]:\t");
 scanf("%s",&cont);
 system("cls");
-}
+} //while loop ends here
 	return 0;
-}
+} //main function ends here
